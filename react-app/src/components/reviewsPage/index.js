@@ -1,12 +1,7 @@
 import React from "react"
+import "./reviews.css"
 
-const reviewsPage=()=>{
-    return (
-        <div className="ReviewsPage">
-        <h1>Reviews</h1>
+export default function reviewsPage() {
 
-        </div>
-    )
+    return (<div className="reviewsPage"><h1>Reviews</h1></div>)
 }
-
-export default reviewsPage
