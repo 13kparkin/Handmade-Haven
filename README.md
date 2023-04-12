@@ -1,5 +1,9 @@
 # Handmade Haven
 
+![Screenshot 2023-04-10 at 12 59 54 PM](https://user-images.githubusercontent.com/105998439/231584900-c2b9311c-c0a3-4006-b6c4-676720de95a1.jpg)
+
+![Screenshot 2023-04-10 at 12 59 46 PM](https://user-images.githubusercontent.com/105998439/231584945-0f111362-7991-42a3-a461-359478e9b255.jpg)
+
 Handmade Haven is a web application that provides an Etsy-like shopping experience. It includes a Flask back end with SQLAlchemy and a React front end, allowing users to sign up, log in, browse and buy products, and leave reviews on those products. The app also includes the ability to create, delete, and edit products.
 
 ## Project Details 
