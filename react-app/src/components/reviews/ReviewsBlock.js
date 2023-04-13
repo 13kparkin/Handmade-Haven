@@ -59,11 +59,12 @@ const MainReviewBlock = ({ id, product, user }) => {
                 <option value={15}>15</option>
             </select></div>
             <div className="MainSubBlock">
-                <OpenModalButton
+
+                {user&&<OpenModalButton
                     buttonText="New Review"
                     onItemClick={closeMenu}
                     modalComponent={<ReviewModal product_id={product?.id} />}
-                />
+                />}
                 {Object.values(ProductReviews).map((review) => {
                     return (
                         <>
