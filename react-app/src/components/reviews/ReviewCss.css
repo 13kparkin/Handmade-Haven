@@ -1,25 +1,56 @@
-.SingleReview{
-    display: flex;
-    border:1px solid black
+.SingleReview {
+  display: flex;
+  border: 1px solid black;
 }
 
-.MainBlock{
-    display: flex;
-    border:1px solid black;
-    flex-direction:column;
+.MainBlock {
+  display: flex;
+  border-top: 1px solid rgb(200, 200, 200);
+  flex-direction: column;
+  padding-left: 10px;
 }
-.pagination{
-    display:flex;
-    flex-direction: row;
+
+.pagination {
+  display: flex;
+  flex-direction: row;
 }
-.ReviewBlock{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+.ReviewBlock {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: rgb(234, 234, 234);
 }
-.ReviewPageButton{
-    display: flex;
-    min-width: 5vw;
+
+.total-reviews {
+  font-size: 30px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.ReviewPageButton {
+  display: flex;
+  min-width: 5vw;
+  background-color: white;
+  border: none;
+  color: rgb(255, 119, 0);
+}
+.per-page {
+  color: rgb(255, 119, 0);
+  font-size: 14px;
+}
+
+.show {
+  color: rgb(255, 119, 0);
+  font-size: 14px;
+}
+
+.show:hover,
+.per-page:hover,
+.ReviewPageButton:hover,
+.select-page:hover {
+  cursor: pointer;
 }
 /* .username_on_Review{
 

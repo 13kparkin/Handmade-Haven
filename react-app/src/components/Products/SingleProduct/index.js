@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleProduct } from "../../../store/products";
 import { addItemToCart, getUserCart } from "../../../store/shoppingcart";
 import AddToCart from "../../ShoppingCart/AddToCart";
 import OpenModalButton from "../../OpenModalButton";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 import MainReviewBlock from "../../reviews/ReviewsBlock";
 import "./SingleProduct.css";
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const { id } = useParams();
   const product = useSelector((state) => state.products.singleProduct);
-  const currUser = useSelector((state) => state?.session?.user)
-  const [quantity, setQuantity] = useState(0)
+  const currUser = useSelector((state) => state?.session?.user);
+  const [quantity, setQuantity] = useState(0);
 
   useEffect(() => {
     dispatch(getSingleProduct(id));
@@ -35,15 +37,14 @@ const SingleProduct = () => {
   const addCartClick = async (e) => {
     e.preventDefault();
 
-
     const data = {
       user_id: currUser.id,
       product_id: product.id,
-      quantity: quantity
-    }
-    console.log("item to be added", data)
-    await dispatch(addItemToCart(data))
-  }
+      quantity: quantity,
+    };
+    console.log("item to be added", data);
+    await dispatch(addItemToCart(data));
+  };
 
   const disableButton = () => {
     if (!currUser) {
@@ -53,6 +54,10 @@ const SingleProduct = () => {
 
   return (
     <div className="single-product-container">
+      <button className="back-button" onClick={() => history.goBack()}>
+        <i className="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;
+        <span className="underline">Back to previous</span>
+      </button>
       <div className="images-row">
         {product.images?.length > 0 ? (
           product.images.map(
@@ -81,7 +86,7 @@ const SingleProduct = () => {
           <p>Seller: {product.seller?.username}</p>
         </Link>
       </div>
-      <MainReviewBlock id={id} product={product} user={currUser}/>
+      <MainReviewBlock id={id} product={product} user={currUser} />
       <select className="select-quantity" onChange={quantityUpdate}>
         <option>Select Quantity</option>
         {maxAvailable.map((number) => (
