@@ -7,12 +7,14 @@ from faker import Faker
 fake = Faker()
 
 
+
+
 # Adds a demo products
 def seed_products():
     users = User.query.all()
     for i in range(20):
         product = Product(
-            name=fake.word(),
+            name=fake.unique.word(),
             description=fake.sentence(),
             price=round(fake.pyfloat(left_digits=2,
                         right_digits=2, positive=True), 2),
