@@ -8,8 +8,8 @@ class Product(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(40), nullable=False, unique=True)
-    description = db.Column(db.String(255), nullable=False, unique=True)
+    name = db.Column(db.String(40), nullable=False)
+    description = db.Column(db.String(255), nullable=False)
     price = db.Column(db.Float(), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     created_at = db.Column(db.DateTime, nullable=False)
