@@ -1,8 +1,8 @@
-from .db import db, environment, SCHEMA
+from .db import db, environment, SCHEMA, add_prefix_for_prod
 
 
 class Product(db.Model):
-    __tablename__ = 'products'
+    __tablename__ = "products"
 
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}
@@ -14,10 +14,18 @@ class Product(db.Model):
     quantity = db.Column(db.Integer, nullable=False)
     created_at = db.Column(db.DateTime, nullable=False)
     updated_at = db.Column(db.DateTime, nullable=False)
-    seller_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    images = db.relationship('Image', back_populates='product')
-    shopping_carts = db.relationship("ShoppingCart", back_populates='products')
+    seller_id = db.Column(db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
 
+    images = db.relationship('Image', back_populates='product')
+    shopping_cart = db.relationship("ShoppingCart", back_populates='products')
+    orders = db.relationship("Order", back_populates='products')
+    reviews = db.relationship("Review", back_populates="product")
+
+    def avg_rating(self):
+        if len(self.reviews) == 0:
+            return 0
+        return sum(review.stars for review in self.reviews) / len(self.reviews)
+        
     def to_dict(self):
         return {
             'id': self.id,
@@ -28,5 +36,7 @@ class Product(db.Model):
             'created_at': self.created_at,
             'updated_at': self.updated_at,
             'images': [image.to_dict() for image in self.images],
-            'seller_id': self.seller_id
+            'seller_id': self.seller_id,
+            'avg_rating':self.avg_rating(),
+            'total_reviews':len(self.reviews)
         }
