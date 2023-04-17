@@ -5,7 +5,8 @@ from random import randint
 
 
 def seed_reviews():
-    for i in range(34):
+    try:
+      for i in range(100):
         review = Review(
             user_id=randint(4, 32),
             product_id=randint(1, 20),
@@ -15,6 +16,9 @@ def seed_reviews():
             updated_at=datetime.utcnow(),
         )
         db.session.add(review)
+    except:
+      print("failed to seed")
+    
     db.session.commit()
 
 

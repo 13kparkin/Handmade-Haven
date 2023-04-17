@@ -14,18 +14,23 @@ const MainReviewBlock = ({ id, product, user }) => {
     let { closeMenu } = useModal()
     let dispatch = useDispatch()
     let [page, setPage] = useState(1)
-    let [per_page, setPer_Page] = useState(3)
+    let [per_page, setPer_Page] = useState(5)
     // let Product = useSelector(state => state.products.SingleProduct)
     let ProductReviews = useSelector(state => state.reviews.SingleProductsReviews)
     useEffect(() => {
         dispatch(getReviewsByProduct(id, page, per_page))
 
-    }, [id, dispatch, product, page, per_page, product.avg_rating]
+    }, [id, dispatch, page, per_page, product]
     )
+
+    
     function handlePages(e) {
         e.preventDefault()
         let buttonValue = e.target.value
         if (page <= 1 && +buttonValue < 0) {
+            return
+        }
+        if(page>=product.total_reviews/per_page && +buttonValue > 0){
             return
         }
         setPage(page + +buttonValue)
@@ -34,7 +39,7 @@ const MainReviewBlock = ({ id, product, user }) => {
     return ProductReviews && (
         <div className="MainBlock">
             <p>{product?.total_reviews}{product?.total_reviews == 1 ? ' Review' : ' Reviews'}</p>
-            <p>Average Star Rating: {product?.avg_rating || 0.0}</p>
+            <p>Average Star Rating: {Math.floor((+(product?.avg_rating)*100))/100 || 0.0}</p>
             <div className="pagination">
             <button
                 className="ReviewPageButton"
@@ -46,7 +51,6 @@ const MainReviewBlock = ({ id, product, user }) => {
                 value={1}
             >{"=>"}</button>
             <select
-                placeholder="#/Page"
                 value={per_page}
                 onChange={(e) => setPer_Page(e.target.value)}
             >
@@ -55,11 +59,12 @@ const MainReviewBlock = ({ id, product, user }) => {
                 <option value={15}>15</option>
             </select></div>
             <div className="MainSubBlock">
-                <OpenModalButton
+
+                {user&&<OpenModalButton
                     buttonText="New Review"
                     onItemClick={closeMenu}
                     modalComponent={<ReviewModal product_id={product?.id} />}
-                />
+                />}
                 {Object.values(ProductReviews).map((review) => {
                     return (
                         <>
