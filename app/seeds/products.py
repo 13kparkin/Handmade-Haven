@@ -9,7 +9,6 @@ fake = Faker()
 
 # Adds a demo products
 def seed_products():
-    faker_instance = faker.Faker()
     users = User.query.all()
     for i in range(20):
         product = Product(
