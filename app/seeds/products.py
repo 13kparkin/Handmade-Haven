@@ -38,8 +38,8 @@ def seed_products():
         "description": "The latest flagship smartphone from Apple, featuring a 6.7 inch Super Retina XDR display, A15 Bionic chip, and 5G connectivity.",
         "price": 1099.00,
         "quantity": 100,
-        "created_at": datetime.now() - timedelta(days=30),
-        "updated_at": datetime.now() - timedelta(days=5),
+        "created_at": datetime.now(),
+        "updated_at": datetime.now(),
         "seller_id": 2
     },
     db.session.add(product)
@@ -48,8 +48,8 @@ def seed_products():
         "description": "The upcoming flagship smartphone from Samsung, rumored to feature a 6.8 inch AMOLED display, Exynos 2200 chipset, and 5G connectivity.",
         "price": 1199.99,
         "quantity": 50,
-        "created_at": datetime.now() - timedelta(days=60),
-        "updated_at": datetime.now() - timedelta(days=20),
+        "created_at": datetime.now(),
+        "updated_at": datetime.now(),
         "seller_id": 3
     },
     db.session.add(product)
@@ -58,8 +58,8 @@ def seed_products():
         "description": "The latest gaming console from Sony, featuring a powerful AMD Zen 2 processor, 4K gaming capabilities, and support for the latest games.",
         "price": 499.99,
         "quantity": 200,
-        "created_at": datetime.now() - timedelta(days=90),
-        "updated_at": datetime.now() - timedelta(days=10),
+        "created_at": datetime.now(),
+        "updated_at": datetime.now(),
         "seller_id": 2
     },
     db.session.add(product)
@@ -68,8 +68,8 @@ def seed_products():
         "description": "The latest laptop from Apple, featuring the M1 chip for fast performance and long battery life, a Retina display, and macOS Monterey.",
         "price": 1499.00,
         "quantity": 50,
-        "created_at": datetime.now() - timedelta(days=120),
-        "updated_at": datetime.now() - timedelta(days=15),
+        "created_at": datetime.now(),
+        "updated_at": datetime.now(),
         "seller_id": 3
     },
     db.session.add(product)
@@ -78,8 +78,8 @@ def seed_products():
         "description": "The latest smart speaker from Amazon, featuring improved sound quality, Alexa voice assistant, and smart home integration.",
         "price": 99.99,
         "quantity": 150,
-        "created_at": datetime.now() - timedelta(days=150),
-        "updated_at": datetime.now() - timedelta(days=25),
+        "created_at": datetime.now(),
+        "updated_at": datetime.now(),
         "seller_id": 2
     },
     db.session.add(product)
@@ -88,8 +88,8 @@ def seed_products():
         "description": "The latest drone from DJI, featuring a Hasselblad camera, 4K video recording, and obstacle avoidance.",
         "price": 1999.00,
         "quantity": 20,
-        "created_at": datetime.now() - timedelta(days=180),
-        "updated_at": datetime.now() - timedelta(days=30),
+        "created_at": datetime.now(),
+        "updated_at": datetime.now(),
         "seller_id": 3
     },
     db.session.add(product)
@@ -98,8 +98,8 @@ def seed_products():
         "description": "The latest noise-cancelling headphones from Bose, featuring improved noise cancellation, voice assistant support, and long battery life.",
         "price": 329.99,
         "quantity": 100,
-        "created_at": datetime.now() - timedelta(days=210),
-        "updated_at": datetime.now() - timedelta(days=35),
+        "created_at": datetime.now(),
+        "updated_at": datetime.now(),
         "seller_id": 2
     },
     db.session.add(product)
