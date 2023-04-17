@@ -34,7 +34,7 @@ created_at = datetime.now() - timedelta(days=random.randint(1, 365)),
 def seed_products():
     users = User.query.all()
     product = Product(
-        name="Samsung Galaxy S22 Ultra",
+        name="Samsung Galaxy S23 Ultra",
         description="The upcoming flagship smartphone from Samsung, rumored to feature a 6.8 inch AMOLED display, Exynos 2200 chipset, and 5G connectivity.",
         price=1199.99,
         quantity=50,
@@ -47,7 +47,7 @@ def seed_products():
     db.session.add(product)
 
     product = Product(
-        name="Sony PlayStation 5",
+        name="Sony PlayStation 6",
         description="The latest gaming console from Sony, featuring a powerful AMD Zen 2 processor, 4K gaming capabilities, and support for the latest games.",
         price=499.99,
         quantity=200,
@@ -58,7 +58,7 @@ def seed_products():
     db.session.add(product)
 
     product = Product(
-        name="Apple MacBook Pro M1",
+        name="Apple MacBook Pro M2",
         description="The latest laptop from Apple, featuring the M1 chip for fast performance and long battery life, a Retina display, and macOS Monterey.",
         price=1499.00,
         quantity=50,
@@ -69,7 +69,7 @@ def seed_products():
     db.session.add(product)
 
     product = Product(
-        name="Amazon Echo (4th Gen)",
+        name="Amazon Echo (5th Gen)",
         description="The latest smart speaker from Amazon, featuring improved sound quality, Alexa voice assistant, and smart home integration.",
         price=99.99,
         quantity=150,
@@ -80,7 +80,7 @@ def seed_products():
     db.session.add(product)
 
     product = Product(
-        name="DJI Mavic 3 Pro",
+        name="DJI Mavic 5 Pro",
         description="The latest drone from DJI, featuring a Hasselblad camera, 4K video recording, and obstacle avoidance.",
         price=1999.00,
         quantity=20,
@@ -91,7 +91,7 @@ def seed_products():
     db.session.add(product)
 
     product = Product(
-        name="Bose QuietComfort 45",
+        name="Bose QuietComfort 46",
         description="The latest noise-cancelling headphones from Bose, featuring improved noise cancellation, voice assistant support, and long battery life.",
         price=329.99,
         quantity=100,
@@ -101,7 +101,7 @@ def seed_products():
     )
     db.session.add(product)
     product = Product(
-        name="Samsung Galaxy S22 Ultra",
+        name="Samsung Galaxy S28 Ultra",
         description="The upcoming flagship smartphone from Samsung, rumored to feature a 6.8 inch AMOLED display, Exynos 2200 chipset, and 5G connectivity.",
         price=1199.99,
         quantity=50,
