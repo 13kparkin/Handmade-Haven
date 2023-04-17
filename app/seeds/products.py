@@ -4,6 +4,8 @@ from datetime import datetime
 from random import randint
 from faker import Faker
 
+fake = Faker()
+
 
 # Adds a demo products
 def seed_products():
@@ -11,17 +13,18 @@ def seed_products():
     users = User.query.all()
     for i in range(20):
         product = Product(
-            name=faker_instance.word() + " " + faker_instance.word(),
-            description=faker_instance.paragraph(),
-            price=round(random.uniform(5, 500), 2),
-            quantity=random.randint(10, 1000),
-            created_at=faker_instance.date_time_this_year(),
-            updated_at=faker_instance.date_time_between_dates(
-                datetime_start=faker_instance.date_time_this_year(),
-                datetime_end=datetime.utcnow()
-            ),
-            seller_id=random.choice(users).id
+            name=fake.word(),
+            description=fake.sentence(),
+            price=round(fake.pyfloat(left_digits=2,
+                        right_digits=2, positive=True), 2),
+            quantity=fake.random_int(min=1, max=100),
+            created_at=fake.date_time_between(
+                start_date='-1y', end_date='now'),
+            updated_at=fake.date_time_between(
+                start_date='-1y', end_date='now'),
+            seller_id=users[randint(1, len(users)-1)].id
         )
+
         db.session.add(product)
 
     db.session.commit()
@@ -29,8 +32,9 @@ def seed_products():
 
 def undo_products():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.products RESTART IDENTITY CASCADE;")
+        db.session.execute(
+            f"TRUNCATE table {SCHEMA}.products RESTART IDENTITY CASCADE;")
     else:
         db.session.execute(text("DELETE FROM products"))
-        
+
     db.session.commit()
