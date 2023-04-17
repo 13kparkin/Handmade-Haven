@@ -27,7 +27,7 @@ PRODUCT_PRICES = [199.99, 999.99, 129.99, 299.99, 129.99, 329.99, 799.99, 599.99
 
 PRODUCT_QUANTITIES = [10, 25, 50, 75, 100, 150, 200]
 
-
+created_at = datetime.now() - timedelta(days=random.randint(1, 365)),
 
 
 # Adds a demo products
