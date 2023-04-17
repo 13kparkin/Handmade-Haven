@@ -33,18 +33,76 @@ created_at = datetime.now() - timedelta(days=random.randint(1, 365)),
 # Adds a demo products
 def seed_products():
     users = User.query.all()
-    for i in range(20):
-        product = Product(
-            name=random.choice(PRODUCT_NAMES),
-            description=random.choice(PRODUCT_DESCRIPTIONS),
-            price=random.choice(PRODUCT_PRICES),
-            quantity=random.choice(PRODUCT_QUANTITIES),
-            created_at=datetime.now() - timedelta(days=random.randint(1, 365)),
-            updated_at=created_at + timedelta(days=random.randint(1, 30)),
-            seller_id=random.randint(2, 3)
-        )
-
-        db.session.add(product)
+    {
+        "name": "Apple iPhone 13 Pro Max",
+        "description": "The latest flagship smartphone from Apple, featuring a 6.7 inch Super Retina XDR display, A15 Bionic chip, and 5G connectivity.",
+        "price": 1099.00,
+        "quantity": 100,
+        "created_at": datetime.now() - timedelta(days=30),
+        "updated_at": datetime.now() - timedelta(days=5),
+        "seller_id": 2
+    },
+    db.session.add(product)
+    {
+        "name": "Samsung Galaxy S22 Ultra",
+        "description": "The upcoming flagship smartphone from Samsung, rumored to feature a 6.8 inch AMOLED display, Exynos 2200 chipset, and 5G connectivity.",
+        "price": 1199.99,
+        "quantity": 50,
+        "created_at": datetime.now() - timedelta(days=60),
+        "updated_at": datetime.now() - timedelta(days=20),
+        "seller_id": 3
+    },
+    db.session.add(product)
+    {
+        "name": "Sony PlayStation 5",
+        "description": "The latest gaming console from Sony, featuring a powerful AMD Zen 2 processor, 4K gaming capabilities, and support for the latest games.",
+        "price": 499.99,
+        "quantity": 200,
+        "created_at": datetime.now() - timedelta(days=90),
+        "updated_at": datetime.now() - timedelta(days=10),
+        "seller_id": 2
+    },
+    db.session.add(product)
+    {
+        "name": "Apple MacBook Pro M1",
+        "description": "The latest laptop from Apple, featuring the M1 chip for fast performance and long battery life, a Retina display, and macOS Monterey.",
+        "price": 1499.00,
+        "quantity": 50,
+        "created_at": datetime.now() - timedelta(days=120),
+        "updated_at": datetime.now() - timedelta(days=15),
+        "seller_id": 3
+    },
+    db.session.add(product)
+    {
+        "name": "Amazon Echo (4th Gen)",
+        "description": "The latest smart speaker from Amazon, featuring improved sound quality, Alexa voice assistant, and smart home integration.",
+        "price": 99.99,
+        "quantity": 150,
+        "created_at": datetime.now() - timedelta(days=150),
+        "updated_at": datetime.now() - timedelta(days=25),
+        "seller_id": 2
+    },
+    db.session.add(product)
+    {
+        "name": "DJI Mavic 3 Pro",
+        "description": "The latest drone from DJI, featuring a Hasselblad camera, 4K video recording, and obstacle avoidance.",
+        "price": 1999.00,
+        "quantity": 20,
+        "created_at": datetime.now() - timedelta(days=180),
+        "updated_at": datetime.now() - timedelta(days=30),
+        "seller_id": 3
+    },
+    db.session.add(product)
+    {
+        "name": "Bose QuietComfort 45",
+        "description": "The latest noise-cancelling headphones from Bose, featuring improved noise cancellation, voice assistant support, and long battery life.",
+        "price": 329.99,
+        "quantity": 100,
+        "created_at": datetime.now() - timedelta(days=210),
+        "updated_at": datetime.now() - timedelta(days=35),
+        "seller_id": 2
+    },
+    db.session.add(product)
 
     db.session.commit()
 
