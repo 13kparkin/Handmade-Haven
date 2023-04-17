@@ -12,7 +12,7 @@ function ReviewModal({ product_id }) {
     const dispatch = useDispatch();
     let [review, setReview] = useState('')
     let [rating, setRating] = useState(0)
-    let user_id = useSelector(state => state.session.user.id)
+    let user_id = useSelector(state => state.session.user?.id)
     const [errors, setErrors] = useState([]);
     const { closeModal } = useModal();
 
