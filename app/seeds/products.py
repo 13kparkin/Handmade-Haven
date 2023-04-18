@@ -229,8 +229,15 @@ def seed_products():
         seller_id=2
     )
     db.session.add(product)
-
-
+    product = Product(
+        name="Amazon Echo (49th Gen)",
+        description="The latest smart speaker from Amazon being cool as he does, featuring improved sound quality, Alexa voice assistant, and smart home integration.",
+        price=99.99,
+        quantity=150,
+        created_at=datetime.utcnow(),
+        updated_at=datetime.utcnow(),
+        seller_id=2
+    )
     db.session.add(product)
 
     db.session.commit()
