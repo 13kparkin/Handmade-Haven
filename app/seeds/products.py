@@ -209,8 +209,8 @@ def seed_products():
     db.session.add(product)
 
     product = Product(
-        name="Apple MacBook Pro M1",
-        description="The latest laptop from Apple, featuring the M1 chip for fast performance and long battery life, a Retina display, and macOS Monterey.",
+        name="Apple MacBook Pro M100000",
+        description="The latest laptop from Apple with all its glory, featuring the M1 chip for fast performance and long battery life, a Retina display, and macOS Monterey.",
         price=1499.00,
         quantity=50,
         created_at=datetime.utcnow(),
