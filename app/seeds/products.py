@@ -153,8 +153,8 @@ def seed_products():
     db.session.add(product)
 
     product = Product(
-        name="Amazon Echo (4th Gen)",
-        description="The latest smart speaker from Amazon, featuring improved sound quality, Alexa voice assistant, and smart home integration.",
+        name="Amazon Echo (400th Gen)",
+        description="The latest smart speaker from Amazon for the 400th time, featuring improved sound quality, Alexa voice assistant, and smart home integration.",
         price=99.99,
         quantity=150,
         created_at=datetime.utcnow(),
