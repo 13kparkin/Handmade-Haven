@@ -30,7 +30,7 @@ def seed_products():
 
     product = Product(
         name="Apple MacBook Pro M2",
-        description="The latest laptop from Apple, featuring the M1 chip for fast performance and long battery life, a Retina display, and macOS Monterey.",
+        description="The latest laptop from Apple is awesome, featuring the M1 chip for fast performance and long battery life, a Retina display, and macOS Monterey.",
         price=1499.00,
         quantity=50,
         created_at=datetime.utcnow(),
