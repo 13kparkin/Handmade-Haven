@@ -7,14 +7,6 @@ import { UpdateReviewThunk, getReviewsByUser } from "../../store/reviews";
 function UpdateReviewsModal({ Review }) {
   const dispatch = useDispatch();
   // let origReview = useSelector(state => state.reviews.LoggedInUsersReviews[reviewId])
-  let [review, setReview] = useState("");
-  let [rating, setRating] = useState(3);
-  let user_id = useSelector((state) => state.session.user.id);
-  const [errors, setErrors] = useState([]);
-  const { closeModal } = useModal();
-
-  const dispatch = useDispatch();
-  // let origReview = useSelector(state => state.reviews.LoggedInUsersReviews[reviewId])
   let [review, setReview] = useState(Review.comment);
   let [rating, setRating] = useState(Review.stars);
   let user_id = useSelector((state) => state.session.user.id);
