@@ -32,10 +32,20 @@
   padding: 0px 10px;
 }
 
+.lg {
+  width: 350px;
+}
+
+.lg2 {
+  margin-top: 35px;
+}
 .about-header {
   padding-top: 20px;
   font-weight: 100;
   font-size: 20px;
+}
+
+.about-header-text {
 }
 
 .links-container {

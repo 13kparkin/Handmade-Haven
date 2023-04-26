@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-container">
         <div className="what-is">What is Handmade Haven?</div>
         <div className="about-block">
-          <div className="about-desc">
+          <div className="about-desc lg">
             A community doing good
             <div className="about-header">
               Handmade Haven is a global online marketplace, where people come
@@ -15,8 +15,12 @@ const About = () => {
               people, and the planet.
             </div>
           </div>
-          <div className="about-desc">
-            Support independent creators
+          <div className="about-desc lg">
+            <div className="about-header-text">
+              {" "}
+              Support independent creators
+            </div>
+
             <div className="about-header">
               {" "}
               There’s no Handmade Haven warehouse – just millions of people
@@ -25,10 +29,10 @@ const About = () => {
               extraordinary.
             </div>
           </div>
-          <div className="about-desc">
+          <div className="about-desc lg">
             {" "}
             Peace of mind
-            <div className="about-header">
+            <div className="about-header lg2">
               {" "}
               Your privacy is the highest priority of our dedicated team. And if
               you ever need assistance, we are always ready to step in for
