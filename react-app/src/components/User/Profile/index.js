@@ -63,7 +63,7 @@ const Profile = () => {
     return null;
   }
 
-  console.log(loggedInUser.id === Number(id))
+  console.log(loggedInUser.id === Number(id));
 
   return (
     <>
@@ -74,7 +74,7 @@ const Profile = () => {
       )}
       <div className="profile-container">
         <div className="profile-header">
-          <h1>Profile</h1>
+          <h1>{user.username}'s Profile</h1>
         </div>
         <div className="profile-body">
           <div className="profile-info">
@@ -85,7 +85,7 @@ const Profile = () => {
               <div className="profile-info-body-left">
                 <div className="profile-info-body-left-item">
                   <h3>Username</h3>
-                  <p>{user.username}</p>                          
+                  <p>{user.username}</p>
                 </div>
                 <div className="profile-info-body-left-item">
                   <h3>Email</h3>

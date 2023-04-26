@@ -46,7 +46,11 @@ const MainReviewBlock = ({ id, product, user }) => {
             {"Previous "}
           </button>
           <div className="page">{page}</div>
-          <button className="ReviewPageButton" onClick={handlePages} value={1}>
+          <button
+            className="ReviewPageButton spaced"
+            onClick={handlePages}
+            value={1}
+          >
             {"Next"}
           </button>
           <div className="show"> Show &nbsp;</div>

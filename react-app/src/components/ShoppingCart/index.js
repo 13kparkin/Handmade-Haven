@@ -28,9 +28,18 @@ export default function ShoppingCart() {
 
   if (!currUser) {
     return (
-      <div className="cart-container">
-        <h1>Please log in to add items to cart</h1>
-      </div>
+      <>
+        <div className="cart-container">
+          <h1 className="please-banner">
+            <div className="please-text">
+              Please log in to add items to cart
+            </div>
+          </h1>
+          <div className="empty-cart">
+            <i className="fas fa-shopping-cart fa-lg fa-10x cart-large"></i>
+          </div>
+        </div>
+      </>
     );
   }
 

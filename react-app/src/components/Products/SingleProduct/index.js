@@ -82,8 +82,8 @@ const SingleProduct = () => {
         <h3 className="single-product-name">{product.name}</h3>
         <p>{product.description}</p>
         <p className="single-product-price">${product.price}</p>
-        <Link to={`/user/${product.seller?.id}`}>
-          <p>Seller: {product.seller?.username}</p>
+        <Link className="seller-link" to={`/user/${product.seller?.id}`}>
+          <p className="seller-link">Seller: {product.seller?.username}</p>
         </Link>
       </div>
       <MainReviewBlock id={id} product={product} user={currUser} />

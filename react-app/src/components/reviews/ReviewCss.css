@@ -1,6 +1,5 @@
 .SingleReview {
   display: flex;
-  border: 1px solid black;
 }
 
 .MainBlock {
@@ -16,9 +15,10 @@
 }
 .ReviewBlock {
   display: flex;
-  width: 100%;
+  width: 40%;
   flex-direction: column;
-  background-color: rgb(234, 234, 234);
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 .total-reviews {
@@ -36,6 +36,10 @@ button:hover {
   border: none;
   color: rgb(255, 119, 0);
 }
+
+.spaced {
+  margin-left: 15px;
+}
 .per-page {
   color: rgb(255, 119, 0);
   font-size: 14px;
@@ -51,6 +55,44 @@ button:hover {
 .ReviewPageButton:hover,
 .select-page:hover {
   cursor: pointer;
+  color: rgb(222, 103, 0);
+}
+
+.username_on_Review {
+  margin-left: 5px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.RatingsBlock {
+  margin-left: 5px;
+}
+
+.modal-Review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+
+.ReviewForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-review {
+  width: 300px;
+  max-width: 300px;
+  height: 150px;
+  max-height: 150px;
+  resize: none;
+}
+
+.review-header {
+  font-weight: 100;
 }
 /* .username_on_Review{
 
