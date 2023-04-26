@@ -57,7 +57,7 @@ const AllProducts = () => {
 
                 <div className="product-info">
                   <div className="product-name">{product.name}</div>
-                  <div className="product-reviews">Reviews go here</div>
+                  {/* <div className="product-reviews">Reviews go here</div> */}
                   <p className="price">${product.price}</p>
                   <p className="product-description">{product.description}</p>
                 </div>

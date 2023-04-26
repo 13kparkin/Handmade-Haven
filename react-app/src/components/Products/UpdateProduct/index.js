@@ -112,6 +112,7 @@ const UpdateProduct = () => {
           <div className="form-item">
             <label>Description</label>
             <textarea
+              className="text-review"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />

@@ -18,7 +18,7 @@ function Navigation({ isLoaded }) {
         <div className="nav-container">
           <ul className="nav-items">
             <li className="nav-left">
-              <NavLink className={".nav-home"} exact to="/">
+              <NavLink className={".nav-home white"} exact to="/">
                 Handmade Haven
               </NavLink>
             </li>

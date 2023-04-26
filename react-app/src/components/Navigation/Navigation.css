@@ -3,36 +3,57 @@
   flex-direction: column;
   border: solid grey 2px;
   position: relative;
-  right: 70px;
-  top: 40px;
+  right: 153px;
+  top: 67px;
   padding-right: 10px;
   padding-left: 10px;
-  width: 200px;
-  height: 200px;
+  transition: all 0.5s ease-in-out;
+  height: 230px;
   list-style: none;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(211, 240, 255);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border-radius: 10px;
+  z-index: 1;
 }
-
+/*
 .profile-dropdown > button {
   color: rgb(0, 0, 0);
   background: none;
   margin: 5px 5px;
-  width: 80px;
   border-radius: 10px;
-}
+} */
 
 .profile-dropdown > button:hover {
   cursor: pointer;
-  background-color: rgb(184, 225, 245);
+  background-color: rgb(219, 219, 219);
+}
+
+.dropdown-button {
+  height: 40px;
+  width: 200px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid black;
+  background-color: white;
+  margin: 10px;
+}
+
+.dropdown-button:hover {
+  cursor: pointer;
+
+  background-color: rgb(225, 225, 225);
 }
 
 .profile-pic:hover {
   cursor: pointer;
+}
+
+.profile-pic {
+  color: white;
 }
 
 .hidden {
@@ -77,19 +98,19 @@
 }
 
 .profile-box {
-  height: 50px;
+  height: 30px;
   width: 40px;
   display: flex;
 }
 
 .profile-box > button {
-  background-color: white;
+  background-color: rgb(255, 119, 0);
   border: none;
   border-radius: 40px;
 }
 
 .profile-box > button:hover {
-  background-color: rgb(215, 215, 215);
+  background-color: rgb(194, 91, 1);
 }
 
 .cart-box {
@@ -138,6 +159,9 @@
   display: flex;
   width: 100%;
 }
+.orange {
+  color: rgb(255, 119, 0);
+}
 
 a {
   text-decoration: none;
@@ -155,14 +179,6 @@ a:hover {
 }
 
 .logout-button {
-  color: rgb(0, 0, 0);
-  background: none;
-  margin: 5px 5px;
-  width: 80px;
-  border-radius: 10px;
-}
-
-.profile-button {
   color: rgb(0, 0, 0);
   background: none;
   margin: 5px 5px;

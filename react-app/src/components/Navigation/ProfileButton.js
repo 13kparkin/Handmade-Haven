@@ -35,6 +35,7 @@ function ProfileButton({ user }) {
     e.preventDefault();
     dispatch(logout());
     history.push("/");
+    closeMenu();
   };
 
   const profileHandler = (e) => {
@@ -63,17 +64,17 @@ function ProfileButton({ user }) {
             <li>Hello {user.username}</li>
             <li>{user.email}</li>
             <li>
-              <button className="profile-button" onClick={profileHandler}>
+              <button className="dropdown-button" onClick={profileHandler}>
                 Profile
               </button>
             </li>
             <li>
-              <button className="profile-button" onClick={addNewHandler}>
+              <button className="dropdown-button" onClick={addNewHandler}>
                 Create Product
               </button>
             </li>
             <li>
-              <button className="logout-button" onClick={handleLogout}>
+              <button className="dropdown-button" onClick={handleLogout}>
                 Log Out
               </button>
             </li>

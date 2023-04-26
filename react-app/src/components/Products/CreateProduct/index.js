@@ -58,8 +58,6 @@ const CreateProduct = () => {
     }
   };
 
-  
-
   const updateImage = (e, idx) => {
     const newImages = [...images];
     newImages[idx] = e.target.value;
@@ -100,6 +98,7 @@ const CreateProduct = () => {
           )}
           <label>Description</label>
           <textarea
+            className="text-review"
             name="description"
             onChange={(e) => setDescription(e.target.value)}
             value={description}

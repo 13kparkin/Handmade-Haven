@@ -16,19 +16,7 @@ function OpenModalButton({
   };
 
   return (
-    <button
-      style={{
-        height: "40px",
-        width: "200px",
-        borderRadius: "20px",
-        textAlign: "center",
-        fontWeight: "bold",
-        border: "2px solid black",
-        backgroundColor: "white",
-        margin: "10px",
-      }}
-      onClick={onClick}
-    >
+    <button className="dropdown-button" onClick={onClick}>
       {buttonText}
     </button>
   );
