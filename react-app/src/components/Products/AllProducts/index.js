@@ -23,7 +23,6 @@ const AllProducts = () => {
   return (
     <>
       <div className="all-products-container">
-        <div></div>
         <div className="products-container">
           {allProducts[0].map((product) => (
             <div
